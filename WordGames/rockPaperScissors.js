@@ -1,6 +1,7 @@
 const UserInput = process.argv[2]?.toLowerCase();
 
 const InputList = ["rock", "paper", "scissors"];
+console.log(process.argv);
 
 function getRandomMove() {
   const randomInput = Math.floor(Math.random() * InputList.length);
@@ -18,11 +19,11 @@ function Winner(inputs, autoanswer) {
     (inputs === "paper" && autoanswer === "rock") ||
     (inputs === "scissors" && autoanswer === "paper")
   ) {
-    return "\n Congratulations...You win! :) \n";
+    return "\n\n Congratulations...You win! :) \n";
   } else if (inputs === autoanswer) {
-    return "\n Aww...It's a draw! :| \n";
+    return "\n\n Aww...It's a draw! :| \n";
   } else {
-    return "\n Sorry...You lose! :( \n";
+    return "\n\n Sorry...You lose! :( \n";
   }
 }
 
